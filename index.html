@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to right, #f8e1f4, #e1f5fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        width: 350px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    .title {
+        font-family: 'Great Vibes', cursive;
+        font-size: 36px;
+        color: #d81b60;
+    }
+
+    .names {
+        font-size: 22px;
+        margin: 15px 0;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .heart {
+        color: red;
+        font-size: 20px;
+    }
+
+    .details {
+        margin: 15px 0;
+        color: #555;
+    }
+
+    .date {
+        font-size: 18px;
+        font-weight: bold;
+        color: #6a1b9a;
+    }
+
+    .location-btn {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 12px 20px;
+        background: #d81b60;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+
+    .location-btn:hover {
+        background: #ad1457;
+        transform: scale(1.05);
+    }
+
+    .footer {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #777;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="title">Wedding Invitation</div>
+
+    <!-- Celebrity Couple -->
+    <div class="names">
+        Ranveer Singh <span class="heart">❤</span> Deepika Padukone
+    </div>
+
+    <div class="details">
+        Together with their families,<br>
+        invite you to celebrate their wedding
+    </div>
+
+    <div class="date">
+        Sunday, 25th December 2026<br>
+        6:00 PM onwards
+    </div>
+
+    <div class="details">
+        Kalyana Mandapam
+    </div>
+
+    <!-- Location Link -->
+    <a class="location-btn" href="https://maps.app.goo.gl/jBtJvcU9hRHt7oEH7" target="_blank">
+        📍 View Location
+    </a>
+
+    <div class="footer">
+        We look forward to your presence ❤️
+    </div>
+</div>
+
+</body>
+</html>
