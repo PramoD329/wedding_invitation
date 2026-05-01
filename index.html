@@ -8,57 +8,96 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ffe0ec, #e0f7fa);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    overflow: hidden;
 }
 
-/* Card */
+/* Floating background circles */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    animation: float 8s infinite ease-in-out;
+}
+
+body::before {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+}
+
+body::after {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+/* Glass card */
 .card {
-    background: #fff;
-    padding: 30px;
+    width: 380px;
+    padding: 25px;
     border-radius: 20px;
-    width: 400px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    color: #333;
 }
 
 /* Title */
 .title {
     font-family: 'Great Vibes', cursive;
-    font-size: 38px;
-    color: #c2185b;
+    font-size: 42px;
+    color: #b0003a;
+    margin-bottom: 10px;
 }
 
 /* Image */
 .couple-img img {
-    width: 220px;
-    height: 260px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
     border-radius: 15px;
-    border: 4px solid #c2185b;
-    margin: 20px 0;
+    margin: 15px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 /* Names */
 .names {
     font-size: 22px;
     font-weight: 600;
+    margin: 10px 0;
 }
 
-.heart {
+.names span {
     color: red;
 }
 
 /* Details */
 .details {
-    color: #555;
-    margin: 10px 0;
+    font-size: 14px;
+    margin: 8px 0;
 }
 
 /* Date */
@@ -66,27 +105,30 @@ body {
     font-size: 18px;
     font-weight: bold;
     color: #6a1b9a;
+    margin: 10px 0;
 }
 
 /* Button */
 .location-btn {
-    margin-top: 20px;
     display: inline-block;
-    padding: 12px 20px;
-    background: #c2185b;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff4081, #c2185b);
     color: white;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 30px;
+    transition: 0.3s;
 }
 
 .location-btn:hover {
-    background: #880e4f;
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 .footer {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #777;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #555;
 }
 </style>
 </head>
@@ -94,25 +136,23 @@ body {
 <body>
 
 <div class="card">
+
     <div class="title">Wedding Invitation</div>
 
-    <!-- Your Uploaded Image -->
     <div class="couple-img">
         <img src="couple.jpg" alt="Virat & Anushka">
     </div>
 
     <div class="names">
-        Virat Kohli ❤ Anushka Sharma
+        Virat Kohli <span>❤</span> Anushka Sharma
     </div>
 
     <div class="details">
-        Together with their families,<br>
-        invite you to celebrate their wedding
+        Together with their families invite you to celebrate their wedding
     </div>
 
     <div class="date">
-        Tuesday, June 23rd, 2026<br>
-        6:00 PM onwards
+        June 23rd, 2026 • 6:00 PM
     </div>
 
     <div class="details">
@@ -124,8 +164,9 @@ body {
     </a>
 
     <div class="footer">
-        We look forward to your presence ❤️
+        We look forward to your presence 💖
     </div>
+
 </div>
 
 </body>
