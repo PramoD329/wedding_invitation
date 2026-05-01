@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wedding Invitation</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
@@ -23,7 +22,7 @@
         background: #fff;
         padding: 30px;
         border-radius: 20px;
-        width: 350px;
+        width: 380px;
         text-align: center;
         box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         animation: fadeIn 1.5s ease;
@@ -40,20 +39,34 @@
         color: #d81b60;
     }
 
+    .images {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .images img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #d81b60;
+    }
+
     .names {
         font-size: 22px;
-        margin: 15px 0;
+        margin: 10px 0;
         font-weight: 600;
         color: #333;
     }
 
     .heart {
         color: red;
-        font-size: 20px;
     }
 
     .details {
-        margin: 15px 0;
+        margin: 10px 0;
         color: #555;
     }
 
@@ -92,7 +105,13 @@
 <div class="card">
     <div class="title">Wedding Invitation</div>
 
-    <!-- Celebrity Couple -->
+    <!-- Couple Photos -->
+    <div class="images">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Ranveer_Singh_at_Deepika_Padukone%27s_reception.jpg" alt="Ranveer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Deepika_Padukone_Cannes_2018.jpg" alt="Deepika">
+    </div>
+
+    <!-- Names -->
     <div class="names">
         Ranveer Singh <span class="heart">❤</span> Deepika Padukone
     </div>
@@ -102,8 +121,9 @@
         invite you to celebrate their wedding
     </div>
 
+    <!-- Updated Date -->
     <div class="date">
-        Sunday, 25th December 2026<br>
+        Tuesday, June 23rd, 2026<br>
         6:00 PM onwards
     </div>
 
@@ -111,7 +131,7 @@
         Kalyana Mandapam
     </div>
 
-    <!-- Location Link -->
+    <!-- Location -->
     <a class="location-btn" href="https://maps.app.goo.gl/jBtJvcU9hRHt7oEH7" target="_blank">
         📍 View Location
     </a>
