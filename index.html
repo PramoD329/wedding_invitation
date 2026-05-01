@@ -8,95 +8,86 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(to right, #f8e1f4, #e1f5fe);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ffe0ec, #e0f7fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    .card {
-        background: #fff;
-        padding: 30px;
-        border-radius: 20px;
-        width: 380px;
-        text-align: center;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        animation: fadeIn 1.5s ease;
-    }
+/* Card */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
-    @keyframes fadeIn {
-        from {opacity: 0; transform: translateY(30px);}
-        to {opacity: 1; transform: translateY(0);}
-    }
+/* Title */
+.title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: #c2185b;
+}
 
-    .title {
-        font-family: 'Great Vibes', cursive;
-        font-size: 36px;
-        color: #d81b60;
-    }
+/* Image */
+.couple-img img {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #c2185b;
+    margin: 20px 0;
+}
 
-    .images {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin: 15px 0;
-    }
+/* Names */
+.names {
+    font-size: 22px;
+    font-weight: 600;
+}
 
-    .images img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #d81b60;
-    }
+.heart {
+    color: red;
+}
 
-    .names {
-        font-size: 22px;
-        margin: 10px 0;
-        font-weight: 600;
-        color: #333;
-    }
+/* Details */
+.details {
+    color: #555;
+    margin: 10px 0;
+}
 
-    .heart {
-        color: red;
-    }
+/* Date */
+.date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a1b9a;
+}
 
-    .details {
-        margin: 10px 0;
-        color: #555;
-    }
+/* Button */
+.location-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 20px;
+    background: #c2185b;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+}
 
-    .date {
-        font-size: 18px;
-        font-weight: bold;
-        color: #6a1b9a;
-    }
+.location-btn:hover {
+    background: #880e4f;
+}
 
-    .location-btn {
-        margin-top: 20px;
-        display: inline-block;
-        padding: 12px 20px;
-        background: #d81b60;
-        color: white;
-        text-decoration: none;
-        border-radius: 25px;
-        transition: 0.3s;
-    }
-
-    .location-btn:hover {
-        background: #ad1457;
-        transform: scale(1.05);
-    }
-
-    .footer {
-        margin-top: 15px;
-        font-size: 14px;
-        color: #777;
-    }
+.footer {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #777;
+}
 </style>
 </head>
 
@@ -105,15 +96,13 @@
 <div class="card">
     <div class="title">Wedding Invitation</div>
 
-    <!-- Couple Photos -->
-    <div class="images">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Ranveer_Singh_at_Deepika_Padukone%27s_reception.jpg" alt="Ranveer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Deepika_Padukone_Cannes_2018.jpg" alt="Deepika">
+    <!-- Your Uploaded Image -->
+    <div class="couple-img">
+        <img src="couple.jpg" alt="Virat & Anushka">
     </div>
 
-    <!-- Names -->
     <div class="names">
-        Ranveer Singh <span class="heart">❤</span> Deepika Padukone
+        Virat Kohli ❤ Anushka Sharma
     </div>
 
     <div class="details">
@@ -121,7 +110,6 @@
         invite you to celebrate their wedding
     </div>
 
-    <!-- Updated Date -->
     <div class="date">
         Tuesday, June 23rd, 2026<br>
         6:00 PM onwards
@@ -131,7 +119,6 @@
         Kalyana Mandapam
     </div>
 
-    <!-- Location -->
     <a class="location-btn" href="https://maps.app.goo.gl/jBtJvcU9hRHt7oEH7" target="_blank">
         📍 View Location
     </a>
